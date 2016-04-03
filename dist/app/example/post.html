@@ -11,7 +11,7 @@
   <meta charset="utf8">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-  <title>getting-started</title>
+  <title>post</title>
 
   <link rel="stylesheet" href="/components/supersonic/css/supersonic.css" />
   <link rel="stylesheet" href="/app/common/stylesheets/application.css" />
@@ -22,6 +22,7 @@
   <script src="/components/angular/angular.js"></script>
   <script src="/components/supersonic/supersonic.js"></script>
   <script src="/components/webcomponentsjs/webcomponents.js"></script>
+  <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
 
   
   <script src="/app/common.js"></script>
@@ -31,29 +32,26 @@
 </head>
 <body ng-app="example">
 
-<div class="padding">
+<div class="padding" ng-controller="SettingsController">
 
   <super-navbar>
     <super-navbar-title>
-      Welcome to Supersonic!
+      Find an Einstein
     </super-navbar-title>
   </super-navbar>
 
-  <p>Awesome! This file is located at <strong>app/example/views/getting-started.html</strong> &mdash; open it, change some text and save the file. The changes are updated to all connected devices. Cool, huh?</p>
+  <h3>Borrow some brainpower</h3>
 
-  <p>Below, you can see our multi-page navigation in action. Tap on a button to move to a new view.</p>
+  <p>Got food? Post a listing and find an Einstein</p>
 
-  <super-navigate view-id="using-the-scanner">
-    <button class="button button-block button-positive icon-left super-wand">Using the AppGyver Scanner</button>
-  </super-navigate>
-
-  <super-navigate view-id="learn-more">
-    <button class="button button-block button-positive icon-left super-university">Learn more</button>
-  </super-navigate>
-
-  <h2>Get in touch with us!</h2>
-
-  <p>Feel free to contact us at <a href="mailto:contact@appgyver.com">contact@appgyver.com</a>, we would love to get your feedback!</p>
+  <h2>Form</h2>
+<form> <!-- action="action_page.php"> -->
+  First name:<br>
+  <input type="text" name="firstname" value="Mickey"><br>
+  Last name:<br>
+  <input type="text" name="lastname" value="Mouse"><br><br>
+  <input type="submit" value="Submit">
+</form>
 
 </div>
 
